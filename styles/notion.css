@@ -46,7 +46,13 @@
 .notion-header .notion-nav-header {
   max-width: 1100px;
   margin: 0 auto;
-  overflow-x: auto;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.notion-header .notion-nav-header::-webkit-scrollbar {
+  display: none;
 }
 
 .notion-nav-header-rhs {
@@ -57,6 +63,7 @@
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   grid-gap: 6vmin;
   gap: 6vmin;
+  row-gap: 3vmin;
 }
 
 .notion-gallery-grid .notion-page-icon-inline {
@@ -123,8 +130,8 @@
   padding: 0.2em 0.75em;
   line-height: 1.5;
   font-style: italic;
-  font-size: 1.2em;
   border-left: 4px solid #67bdfc;
+  font-size: 1em;
 }
 
 .notion-h1,
@@ -133,9 +140,78 @@
   margin-bottom: 0.25em;
 }
 
-.notion-callout {
-  margin: 0.75em 0;
+/* custom */
+
+a.notion-link {
+    border-bottom: none;
+    padding: 2px!important;
+    display: inline-block!important
 }
+
+a.notion-link:hover {
+    border-bottom: none!important
+}
+
+.notion-block-21ec813f9c548039b856d8a0611a007d{
+    text-align: center;
+    padding: 20px;
+    color: var(--bg-color);
+    background-color: var(--notion-blue);
+    border-radius: 15px;
+    font-weight: 700
+}
+
+/* green jobs */
+.notion-block-221c813f9c54807ebb54ed0d6dbcd818 {
+    text-align: center;
+    padding: 20px;
+    color: var(--notion-item-bullet-green);
+    background-color: var(--notion-item-green);
+    border-radius: 15px;
+    font-weight: 700;
+} /* button atas */
+
+.notion-block-221c813f9c5480269442f3ee69c41481 {
+    text-align: center;
+    color: var(--notion-gray);
+    padding: 20px;
+}
+
+.notion-block-21ec813f9c548039b856d8a0611a007d:hover {
+    box-shadow: 0 0 0 4px var(--bg-color-2)
+}
+
+.notion-callout {
+    padding-right: 56px;
+    text-align: justify;
+    display: inline-flex;
+    width: 100%;
+    border-radius: 50px;
+    border-width: 5px;
+    align-items: center;
+    box-sizing: border-box;
+    border-left: 10px solid;
+}
+
+.notion-callout .notion-page-icon-inline {
+    align-self: flex-start;
+    width: 24px;
+    height: 24px;
+    line-height: 15px;
+    font-size: 1.3em;
+    margin: 15px 5px 10px 0px
+}
+
+.dark-mode .notion-callout {
+    border-color: var(--bg-color-2)
+}
+
+.notion-callout-text {
+    white-space: pre-wrap;
+    word-break: break-word;
+    width: 100%
+}
+
 
 .notion-hr {
   margin: 2em 0;
