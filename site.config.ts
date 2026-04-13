@@ -61,4 +61,4 @@ export default siteConfig({
       title: 'Get in Touch',
       pageId: '140c813f9c5480c49e9ad6700cbb75b9'
     }
-  ],
+  ]
